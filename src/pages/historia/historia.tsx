@@ -4,6 +4,7 @@ import HistoryHero from "../../components/Historyhero/Historyhero";
 import HistoryNarrative from "../../components/Historynarrative/Historynarrative";
 import HistoryTimeline from "../../components/Historytimeline/Historytimeline";
 import FoundersSection from "../../components/Founderssection/Founderssection";
+import { Link } from "react-router-dom";
 
 export default function Historia() {
   return (
@@ -29,8 +30,8 @@ export default function Historia() {
           >
             Sua mesa está esperando
           </h2>
-          <a
-            href="/reserva"
+          <Link
+            to="/reserva"
             className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-400 text-black font-bold tracking-widest uppercase text-sm px-10 py-4 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(245,158,11,0.35)]"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
@@ -38,7 +39,7 @@ export default function Historia() {
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </Link>
         </section>
       </main>
       <Footer />

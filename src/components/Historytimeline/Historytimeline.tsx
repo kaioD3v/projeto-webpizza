@@ -78,8 +78,8 @@ export default function HistoryTimeline() {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-[90px] md:left-1/2 top-0 bottom-0 w-px bg-amber-900/40 -translate-x-1/2" />
+          {/* Vertical line — left-aligned on mobile, centered on desktop */}
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-amber-900/40 md:-translate-x-1/2" />
 
           <div className="flex flex-col gap-14">
             {milestones.map((item, index) => {
@@ -87,17 +87,33 @@ export default function HistoryTimeline() {
               return (
                 <div
                   key={item.year}
-                  className={`relative flex items-start gap-6 md:gap-0 ${
-                    isEven ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
+                  className={`relative flex items-start md:gap-0
+                    /* Mobile: always left-to-right */
+                    gap-6 flex-row
+                    /* Desktop: alternate sides */
+                    ${isEven ? "md:flex-row" : "md:flex-row-reverse"}
+                  `}
                 >
-                  {/* Content */}
+                  {/* Dot + year — left edge on mobile, centered on desktop */}
+                  <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 flex flex-col items-center gap-1 z-10">
+                    <div className="w-4 h-4 rounded-full bg-amber-500 border-4 border-[#0e0b07] ring-1 ring-amber-700" />
+                    <span
+                      className="text-amber-400 text-xs font-bold tracking-widest whitespace-nowrap"
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                    >
+                      {item.year}
+                    </span>
+                  </div>
+
+                  {/* Content — always indented from left on mobile */}
                   <div
-                    className={`flex-1 ${
-                      isEven
-                        ? "md:pr-16 md:text-right"
-                        : "md:pl-16 md:text-left"
-                    } pl-20 md:pl-0`}
+                    className={`
+                      /* Mobile: always left-aligned with indent */
+                      pl-12 text-left w-full
+                      /* Desktop: half-width, alternating alignment */
+                      md:pl-0 md:flex-1
+                      ${isEven ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"}
+                    `}
                   >
                     <h3
                       className="text-white text-xl font-bold mb-2"
@@ -113,19 +129,8 @@ export default function HistoryTimeline() {
                     </p>
                   </div>
 
-                  {/* Center dot + year */}
-                  <div className="absolute left-[90px] md:left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 z-10">
-                    <div className="w-4 h-4 rounded-full bg-amber-500 border-4 border-[#0e0b07] ring-1 ring-amber-700" />
-                    <span
-                      className="text-amber-400 text-xs font-bold tracking-widest whitespace-nowrap"
-                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                    >
-                      {item.year}
-                    </span>
-                  </div>
-
-                  {/* Empty side on desktop */}
-                  <div className="hidden md:block flex-1" />
+                  {/* Empty side spacer — desktop only */}
+                  <div className="hidden md:block md:flex-1" />
                 </div>
               );
             })}
