@@ -5,9 +5,9 @@ import ExperienceCard from "../experienceCard/Experiencecard";
 
 const experiences = [
   {
-    title: "Pizzaria Temática",
+    title: "Rodizio de Pizzas",
     description:
-      "Uma experiência sensorial única com pizzas artesanais em um ambiente medieval mágico. Cada detalhe foi pensado para transportar você a outro mundo.",
+      "Uma experiência sensorial única com pizzas artesanais em um ambiente italiano clássico. Cada detalhe foi pensado para transportar você a outro mundo.",
     imageUrl:
       "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=80",
     href: "/pizzaria",
@@ -15,18 +15,18 @@ const experiences = [
     badge: "Destaque",
   },
   {
-    title: "Menu Degustação",
+    title: "Aniversário La Massie",
     description:
-      "Ingredientes selecionados, massas frescas e combinações inusitadas que elevam a pizza a um novo patamar gastronômico.",
+      "Celebre conosco! Uma festa de aniversário inesquecível com decoração temática, menu especial e uma atmosfera que mistura nostalgia e modernidade.",
     imageUrl:
       "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=900&q=80",
     href: "/menu",
     label: "Ver o Menu",
   },
   {
-    title: "Fondue Temático",
+    title: "Confraternizações e Eventos",
     description:
-      "A era do fogo: uma experiência de fondue exclusiva em um ambiente que mistura magia, calor e sabores memoráveis.",
+      "O espaço perfeito para confraternizações, eventos corporativos e celebrações especiais. Oferecemos um ambiente acolhedor, serviço impecável e um cardápio personalizado para tornar seu evento inesquecível.",
     imageUrl:
       "https://images.unsplash.com/photo-1610614819513-58e34989848b?w=900&q=80",
     href: "/fondue",

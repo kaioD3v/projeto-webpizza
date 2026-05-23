@@ -1,5 +1,5 @@
 import "../../index.css";
-
+import { Link } from "react-router-dom";
 
 interface HeroProps {
   onScrollToExperiences?: () => void;
@@ -64,13 +64,13 @@ export default function Hero({ onScrollToExperiences }: HeroProps) {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="/reserva"
+          <Link
+            to="/reserva"
             className="bg-amber-500 hover:bg-amber-400 text-black font-bold tracking-widest uppercase text-sm px-8 py-4 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(245,158,11,0.4)]"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Quero fazer minha reserva
-          </a>
+          </Link>
           <button
             onClick={onScrollToExperiences}
             className="border border-amber-500/60 hover:border-amber-400 text-amber-300 hover:text-amber-200 font-medium tracking-widest uppercase text-sm px-8 py-4 transition-all duration-300 hover:bg-amber-500/10"

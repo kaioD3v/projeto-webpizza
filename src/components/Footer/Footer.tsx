@@ -1,13 +1,12 @@
 import "../../index.css";
+import { Link } from "react-router-dom";
 
 
 const footerLinks = [
   { label: "home", href: "/" },
   { label: "nossa história", href: "/historia" },
-  { label: "pizzaria temática", href: "/pizzaria" },
-  { label: "menu secreto", href: "/menu" },
   { label: "experiências", href: "/experiencias" },
-  { label: "loja", href: "/loja" },
+  { label: "cardápio", href: "/cardapio" },
 ];
 
 const locations = [
@@ -84,13 +83,13 @@ export default function Footer() {
           <ul className="flex flex-col gap-3">
             {footerLinks.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
+                <Link
+                  to={link.href}
                   className="text-stone-400 hover:text-amber-400 text-sm tracking-wide transition-colors duration-300 capitalize"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
