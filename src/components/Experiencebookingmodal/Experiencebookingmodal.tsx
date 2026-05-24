@@ -151,8 +151,8 @@ export default function ExperienceBookingModal({ type, onClose }: ExperienceBook
               </div>
 
               <div className="grid grid-cols-7 mb-1">
-                {WEEK_DAYS.map((d, i) => (
-                  <div key={i} className="text-center text-[10px] text-stone-700 py-1 font-bold"
+                {WEEK_DAYS.map((d) => (
+                  <div key={d} className="text-center text-[10px] text-stone-700 py-1 font-bold"
                     style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                     {d}
                   </div>
