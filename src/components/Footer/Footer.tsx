@@ -12,11 +12,11 @@ const footerLinks = [
 const locations = [
   {
     name: "Pizzaria Temática",
-    address: "Rua das Massas, 1791 – Centro, São Paulo – SP",
+    address: "Rua das Massas, 1791 – Centro, Caruaru – PE",
   },
   {
     name: "Menu Secreto",
-    address: "Av. dos Sabores, 2875 – Centro, São Paulo – SP",
+    address: "Av. dos Sabores, 2875 – Centro, Caruaru – PE",
   },
 ];
 
