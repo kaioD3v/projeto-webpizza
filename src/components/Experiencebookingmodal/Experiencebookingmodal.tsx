@@ -109,7 +109,7 @@ export default function ExperienceBookingModal({ type, onClose }: ExperienceBook
         {step !== "done" && (
           <div className="px-6 pt-5 pb-0">
             <div className="flex items-center gap-1 mb-5">
-              {(["date","time","details"] as ModalStep[]).map((s, i) => {
+              {(["date","time","details"] as ModalStep[]).map((s) => {
                 const steps: ModalStep[] = ["date","time","details","done"];
                 const cur = steps.indexOf(step);
                 const idx = steps.indexOf(s);
